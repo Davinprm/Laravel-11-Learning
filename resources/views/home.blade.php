@@ -5,9 +5,7 @@
         <article>      
             <div class="contentTitle">
                 <a href="/article/{{ $post['slug'] }}">
-                    <div>
-                        <p>{{ $post['title'] }}</p>
-                    </div>
+                        <p>{{ $post['slug'] }}</p>
                 </a>
                 <div class="author">
                     <a href="#">{{ $post['author'] }}</a>

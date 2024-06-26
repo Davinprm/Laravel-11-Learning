@@ -3,18 +3,19 @@
         <article>      
             <div class="contentTitle">
                 <div>
-                    <p>{{ $post['title'] }}</p>
+                    <p>{{ $post['slug'] }}</p>
                 </div>
                 <div class="author">
                     <a href="#" >{{ $post['author'] }}</a>
-                    <time datetime="2024-06-25T14:30:00">Jun 25 2024</time>
+                    <time datetime="{{ $post['created_at'] }}</time>
+                </div>">{{ $post['created_at']->diffForHumans() }}</time>
                 </div>
             </div>
             <div class="contentArticle">
                 <p>{{ $post['article'] }}</p>
                 <div class="link">
-                    <a href="/article/{{ --$post['slug'] }}" class="readMore">Back</a>
-                    <a href="/article/{{ ++$post['slug'] }}" class="readMore">Next</a>
+                    <a href="/article/{{ $post['slug'] }}" class="readMore">Back</a>
+                    <a href="/article/{{ $post['slug'] }}" class="readMore">Next</a>
                 </div>
             </div>
         </article>

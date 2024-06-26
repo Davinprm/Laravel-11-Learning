@@ -3,7 +3,7 @@
     <article>
         <div class="contentTitle">
             <div>
-                <p>About Me</p>
+                <p>{{ $title }}</p>
             </div>  
         </div>      
         <div class="contentArticle">

@@ -4,11 +4,12 @@
     @foreach ($posts as $post)
         <article>      
             <div class="contentTitle">
-                <a href="/article/{{ $post['slug'] }}">
-                        <p>{{ $post['slug'] }}</p>
-                </a>
+                <div class="title">
+                    <a href="/article/{{ $post['slug'] }}">{{ $post['slug'] }}</a>
+                    <a style="font-size: small;color: rgb(77, 77, 77);" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
+                </div>
                 <div class="author">
-                    <a href="/authors/{{ $post->author->id }}">{{ $post->author->name }}</a>
+                    <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a>
                 </div>
             </div>
             <div class="contentArticle">

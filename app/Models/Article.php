@@ -16,4 +16,9 @@ class Article extends Model
         return $this->belongsTo(User::class);
         // one to one relationship between Article model with User model, where each article is associated with one author
     }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

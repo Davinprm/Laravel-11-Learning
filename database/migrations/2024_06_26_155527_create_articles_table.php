@@ -30,8 +30,14 @@ return new class extends Migration {
                 // specifies name of d index that will be created for d foreign key
             );
 
+            $table->foreignId('category_id')->constrained(
+                table: 'categories',
+                indexName: 'article_category_id'
+            );
+
             $table->string('slug')->unique();
             // unique func to make slug key has not be d same with others
+
             $table->text('article');
             $table->timestamps();
         });

@@ -2,15 +2,16 @@
     <x-slot:title>{{ $title }}</x-slot:title>
         <article>      
             <div class="contentTitle">
-                <div>
+                <div class="title">
                     <p>{{ $post['slug'] }}</p>
+                    <a style="font-size: small;color: rgb(77, 77, 77);" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
                 </div>
                 <div class="author">
-                    <a href="/authors/{{ $post->author->id }}" >{{ $post->author->name }}</a>
+                    <a href="/authors/{{ $post->author->username }}" >{{ $post->author->name }}</a>
                     <time>{{ $post['created_at']->diffForHumans() }}</time>
                 </div>
             </div>
-            <div class="contentArticle">
+            <div class="contentArticle flexbasis">
                 <div>
                     <p>{{ $post['article'] }}</p>
                 </div>

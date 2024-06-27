@@ -2,6 +2,7 @@
 
 use App\Models\User;
 use App\Models\Article;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -30,7 +31,12 @@ Route::get('/about', function () {
 });
 
 //route binding
-Route::get('/authors/{user}', function (User $user)
+Route::get('/authors/{user:username}', function (User $user)
 {
-    return view('Home', ['title' => 'Article by' . $user->name, 'posts' => $user->article]);
+    return view('Home', ['title' => count($user->article) . '  Article by' . $user->name, 'posts' => $user->article]);
+});
+
+Route::get('/categories/{category:slug}', function (Category $category)
+{
+    return view('Home', ['title' => 'Category', 'posts' => $category->article]);
 });

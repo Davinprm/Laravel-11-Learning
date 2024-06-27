@@ -119,6 +119,12 @@ article {
     gap: 1.5rem;
 }
 
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+}
+
 .contentTitle > :first-child {
     font-size: 1.1rem;
     color: #000000;
@@ -148,7 +154,7 @@ article {
     /* border: 1px solid; */
     justify-content: space-between;
     gap: 1.5rem;
-    flex-basis: 100%;
+    box-sizing: border-box;
 }
 
 .link {
@@ -156,4 +162,8 @@ article {
     /* border: 1px solid; */
     justify-content: space-between;
 
+}
+
+.flexbasis{
+    flex-basis: 100%;
 }

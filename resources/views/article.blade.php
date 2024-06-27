@@ -7,8 +7,7 @@
                 </div>
                 <div class="author">
                     <a href="#" >{{ $post['author'] }}</a>
-                    <time datetime="{{ $post['created_at'] }}</time>
-                </div>">{{ $post['created_at']->diffForHumans() }}</time>
+                    <time datetime="{{ $post['created_at']->diffForHumans() }}">{{ $post['created_at']->diffForHumans() }}</time>
                 </div>
             </div>
             <div class="contentArticle">

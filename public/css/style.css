@@ -111,6 +111,8 @@ article {
     justify-content: space-between;
     box-sizing: border-box;
     /* border: 1px solid; */
+    /* flex-basis: 2; */
+    width: 12vw;
 }
 
 .contentTitle > :first-child {
@@ -140,8 +142,7 @@ article {
 .contentArticle {
     display: flex;
     flex-direction: column;
-    /* border: 1px solid; */
-    flex-basis: 100%;
+    width: auto;
 }
 
 .link {

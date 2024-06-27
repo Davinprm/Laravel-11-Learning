@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -19,9 +20,13 @@ class ArticleFactory extends Factory
     {
         return [
             'title' => fake()->sentence(1, false),
-            'author' => fake()->name(),
+            'author_id' => User::factory(),
             'slug' => Str::slug(fake()->sentence(5, false)),
             'article' => fake()->text()
         ];
     }
 }
+
+// php artisan tinker
+// App\Models\Article::factory(15)->recycle(User::factory(3)->create())->create()
+// create 15 articles for each article and assigns random author in User table

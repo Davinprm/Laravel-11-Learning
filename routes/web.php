@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use App\Models\Article;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +27,10 @@ Route::get('/about', function () {
         'name' => 'Davin Permana', 
         'email' => 'davinpermana64@gmail.com'
         ]);
+});
+
+//route binding
+Route::get('/authors/{user}', function (User $user)
+{
+    return view('Home', ['title' => 'Article by' . $user->name, 'posts' => $user->article]);
 });

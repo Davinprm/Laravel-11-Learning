@@ -8,7 +8,7 @@
                         <p>{{ $post['slug'] }}</p>
                 </a>
                 <div class="author">
-                    <a href="#">{{ $post['author'] }}</a>
+                    <a href="/authors/{{ $post->author->id }}">{{ $post->author->name }}</a>
                 </div>
             </div>
             <div class="contentArticle">

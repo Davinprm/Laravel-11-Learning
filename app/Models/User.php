@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -43,5 +44,12 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function article(): HasMany
+    {
+        return $this->hasMany(Article::class, 'author_id');
+        // one to one relationship between User model with Article model, where each author is associated with many article
+        // second param is to tell that we have changed foreign key name to another, not users_id (def)
     }
 }

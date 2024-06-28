@@ -123,6 +123,7 @@ article {
     display: flex;
     flex-direction: column;
     gap: .6rem;
+    
 }
 
 .contentTitle > :first-child {

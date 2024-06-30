@@ -18,21 +18,24 @@ class CategorySeeder extends Seeder
         Category::create(
             [
                 'name' => 'Story',
-                'slug' => 'story'
+                'slug' => 'story',
+                'color' => ''
             ]
         );
 
         Category::create(
             [
                 'name' => 'Front End',
-                'slug' => 'front-end'
+                'slug' => 'front-end',
+                'color' => 'darkMedium'
             ]
         );
 
         Category::create(
             [
                 'name' => 'Back End',
-                'slug' => 'back-end'
+                'slug' => 'back-end',
+                'color' => 'darkHigh'
             ]
         );
     }

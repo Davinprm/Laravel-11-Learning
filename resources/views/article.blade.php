@@ -1,13 +1,13 @@
 <x-layout>
     <x-slot:title>{{ $title }}</x-slot:title>
-        <article>      
+        <article class="{{ $post->category->color }}">      
             <div class="contentTitle">
                 <div class="title">
                     <p>{{ $post['slug'] }}</p>
-                    <a style="font-size: small;color: rgb(77, 77, 77);" href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
+                    <a style="font-size: small;color: rgb(77, 77, 77);" href="/?category={{ $post->category->slug }}">{{ $post->category->name }}</a>
                 </div>
                 <div class="author">
-                    <a href="/authors/{{ $post->author->username }}" >{{ $post->author->name }}</a>
+                    <a href="/?authors={{ $post->author->username }}" >{{ $post->author->name }}</a>
                     <time>{{ $post['created_at']->diffForHumans() }}</time>
                 </div>
             </div>

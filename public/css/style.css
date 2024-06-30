@@ -2,7 +2,7 @@
 html body {
     margin: 0;
     padding: 0;
-    font-size: 1rem;
+    font-size: 1rem; 
 }
 
 body {
@@ -91,6 +91,32 @@ main > :first-child {
     margin: calc(13vh + 1.5rem) auto auto;
 }
 
+.searchBox {
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: rgb(221, 221, 221);
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.searchBox input {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.searchBox submit .fas {
+    color: #2e2e2e;
+    font-size: 18px;
+}
+
+.searchBox:focus-within {
+    background: rgb(218, 218, 218);
+}
+
 article {
     width: 94.5vw;
     display: flex;
@@ -102,6 +128,14 @@ article {
     background-color: rgb(238, 238, 238);
     padding: 1rem 1rem 1rem 2rem;
     flex-basis: 100%;
+}
+
+.darkMedium {
+    background-color: rgb(168, 168, 168);
+}
+
+.darkHigh {
+    background-color: rgb(108, 108, 108);
 }
 
 .readMore {

@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>{{ $slot }}</title>
         <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    </head>
+        <script src="https://kit.fontawesome.com/a8cf426a44.js" crossorigin="anonymous"></script>    </head>
     <body>
         <header>
             <div class="logo">
